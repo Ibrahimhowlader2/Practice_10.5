@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- bootstrap cdn link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- header section starts  -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Practice Shop</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a class="nav-link" href="/navigation/popular_menu"
+                >Populer Menu</a
+              >
+              <a class="nav-link" href="/navigation/about">About Us</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- header section ends -->
+
+      <h1>Home Page</h1>
+      <hr />
+      <h2>Here Some Template Filters</h2>
+      <hr />
+
+      <h3 style="color: green">--- length of array ---</h3>
+      <h3>{{ data | length }}</h3>
+
+      <h3 style="color: green">--- Add ---</h3>
+      <h3>{{ title_test | add:"2" }}</h3>
+
+      <h3 style="color: green">--- Length of Text ---</h3>
+      <h3>{{ title|length }}</h3>
+
+      <h3 style="color: green">--- Float Format ---</h3>
+      <h3>Original amount: {{ amount }}</h3>
+      <h3>Formatted amount: {{ amount|floatformat:2 }}</h3>
+
+      <h3 style="color: green">--- Default Value ---</h3>
+      <h3>{{ undefined_variable|default:"No value provided" }}</h3>
+
+      <h3 style="color: green">--- Escape HTML ---</h3>
+      <h3>{{ title|escape }}</h3>
+
+      <h3 style="color: green">--- First Element ---</h3>
+      <h3>Original : {{ fruits }}</h3>
+      <h3>Formated : {{ fruits | first }}</h3>
+
+      <h3 style="color: green">--- Last Element ---</h3>
+      <h3>Original : {{ fruits }}</h3>
+      <h3>Formated : {{ fruits | last }}</h3>
+
+      <h3 style="color: green">--- Join List ---</h3>
+      <h3>{{ fruits|join:", " }}</h3>
+
+      <h3 style="color: green">--- dictsort ---</h3>
+      <h3>Original : {{ users }}</h3>
+      <h3>Dictsort : {{ users | dictsort:"name" }}</h3>
+
+      <h3 style="color: green">--- filesize format ---</h3>
+      <h3>Original : {{ file_size }}</h3>
+      <h3>Formated : {{ file_size | filesizeformat }}</h3>
+
+      <h3 style="color: green">--- Uppercase,Lowercase,Capitalized format ---</h3>
+      <h3>Uppercase text: {{ title|upper }}</h3>
+      <h3>Lowercase text: {{ title|lower }}</h3>
+      <h3>Capitalized text: {{ title|capfirst }}</h3>
+
+      <h3 style="color: green">--- Truncated paragraph ---</h3>
+      <h3>Original : {{ paragraph }}</h3>
+      <h3>Truncated paragraph : {{ paragraph|truncatewords:5 }}</h3>
+
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
